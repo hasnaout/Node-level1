@@ -22,6 +22,6 @@ const AvisSchema=new Schema({
     }
 },{timestamps:true});
 
-const AvisModel=mongoose.model('Avis',AvisSchema);
-module.exports=AvisModel;
+const Avis=mongoose.model('Avis',AvisSchema);
+module.exports=Avis;
   

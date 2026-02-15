@@ -1,5 +1,4 @@
-const mongoose=required('mongoose');
-
+const mongoose=require('mongoose');
 const Schema=mongoose.Schema;
 
 const CategorieServiceSchema=new Schema({
@@ -7,6 +6,5 @@ const CategorieServiceSchema=new Schema({
     description:String
 });
 
-const CategorieServiceSchemaModel=mongoose.model('CategorieService',CategorieServiceSchema);
-
-module.exports=CategorieServiceSchemaModel;
+const CategorieService=mongoose.model('CategorieService',CategorieServiceSchema);
+module.exports=CategorieService;

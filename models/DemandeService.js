@@ -1,5 +1,4 @@
- const mongoose=required('mongoose');
-
+const mongoose=require('mongoose');
 const Schema=mongoose.Schema;
 
 const DemandeServiceSchema=new Schema({
@@ -9,18 +8,17 @@ const DemandeServiceSchema=new Schema({
     etat:String,
     adresse_client:String,
     date_publication:Date,
-    client:{
+    Client:{
         type:mogoose.Schema.Types.ObjectId,
         ref:"Client",
         required:true
     },
-    categorie_service:{
+    CategorieService:{
         type:mogoose.Schema.Types.ObjectId,
         ref:"CategorieService",
         required:true
     }
 },{timestamps:true});
     
-const DemandeServiceModel=mongoose.model('DemandeService',DemandeServiceSchema);
-
-module.exports=DemandeServiceModel; 
+const DemandeService=mongoose.model('DemandeService',DemandeServiceSchema);
+module.exports=DemandeService; 

@@ -5,7 +5,6 @@ const MessageSchema=new Schema({
     contenu:String,
     date_envoi:Date,
     lu:Boolean,
-
     Expediteur :{
         type:Schema.Types.ObjectId,
         ref:"Client"
@@ -15,5 +14,6 @@ const MessageSchema=new Schema({
         ref:"Prestataire"
     }
 },{timestamps:true});   
-const MessageModel=mongoose.model('Message',MessageSchema);
-module.exports=MessageModel;
+
+const Message=mongoose.model('Message',MessageSchema);
+module.exports=Message;

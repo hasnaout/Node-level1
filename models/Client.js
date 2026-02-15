@@ -10,12 +10,11 @@ const ClientSchema=new Schema({
    adresse:String,
    password:String
    },{timestamps:true});
+                                 
 
-
-
-
+   
 //crer model de schema
-const ClientModel=mongoose.model('Client',ClientSchema);
+const Client=mongoose.model('Client',ClientSchema);
 
 //exporter le model
-module.exports=ClientModel;
+module.exports=Client;

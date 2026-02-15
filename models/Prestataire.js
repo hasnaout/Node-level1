@@ -1,5 +1,6 @@
 const mongoose = require("mongoose");
 const Schema=mongoose.Schema;
+
 const PrestataireSchema = new Schema({
     nom: String,
     prenom: String,
@@ -9,7 +10,10 @@ const PrestataireSchema = new Schema({
     tarif_horaire: Number,
     disponible: Boolean,
     description: String,
-    competences: [{ type: Schema.Types.ObjectId, ref: "Competence" }]
+    Competence: [{ 
+        type: Schema.Types.ObjectId,
+         ref: "Competence" }]
     }, { timestamps: true });
-const PrestataireModel=mongoose.model("Prestataire", PrestataireSchema);
-module.exports = PrestataireModel;
+
+const Prestataire=mongoose.model("Prestataire", PrestataireSchema);
+module.exports = Prestataire;

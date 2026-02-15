@@ -6,12 +6,11 @@ const MissionSchema=new Schema({
     date_fin:Date,
     prix_final:Number,
     statut:String,
-
     Proposition :{
         type:Schema.Types.ObjectId,
         ref:"Proposition"
     }
 },{timestamps:true});
     
-const MissionModel=mongoose.model('Mission',MissionSchema); 
-module.exports=MissionModel;
+const Mission=mongoose.model('Mission',MissionSchema); 
+module.exports=Mission;

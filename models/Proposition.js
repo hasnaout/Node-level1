@@ -1,5 +1,4 @@
 const mongoose=require('mongoose');
-
 const Schema=mongoose.Schema;
 
 const PropositionSchema=new Schema({
@@ -11,12 +10,11 @@ const PropositionSchema=new Schema({
         ref:"Prestataire",
         required:true
     },
-    Demande_Service:{type:Schema.Types.ObjectId,
+    DemandeService:{type:Schema.Types.ObjectId,
         ref:"DemandeService",
         required:true
     }
 },{timestamps:true});
     
-const PropositionModel=mongoose.model('Proposition',PropositionSchema);
-
-module.exports=PropositionModel; 
+const Proposition=mongoose.model('Proposition',PropositionSchema);
+module.exports=Proposition; 
